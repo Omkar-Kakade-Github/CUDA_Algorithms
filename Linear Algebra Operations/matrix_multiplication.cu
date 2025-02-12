@@ -1,7 +1,7 @@
 #include "sgemm_kernels.h"
 #include <cstdio>
 
-__global__ void sgemm_naive_kernel(int M, int N, int K, 
+__global__ void matrix_multiplication_kernel(int M, int N, int K, 
                                    float alpha, float *A, float *B, 
                                    float beta, float *C) {
     int x = blockIdx.x * blockDim.x + threadIdx.x;
